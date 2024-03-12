@@ -7,7 +7,7 @@ import { BiFoodTag } from "react-icons/bi";
 
 
 
-function FoodCard({ id, imgUrl, name, currency, price, ratings, desc, qty, toastHandler, type }) {
+function FoodCard({ id, imgUrl, name, currency, price, ratings, desc, netQuantity, qty, toastHandler, type }) {
 
   const dispatch = useDispatch();
 
@@ -17,13 +17,16 @@ function FoodCard({ id, imgUrl, name, currency, price, ratings, desc, qty, toast
   }
   return (
     <>
-      <div className="border border-gray-300 rounded-xl w-full">
+      <div className="border border-gray-300 rounded-xl w-full shrink-0">
         <div className="overflow-hidden cursor-grab rounded-t-xl">
           <img src={imgUrl} alt={name} className="w-full h-[25rem] object-cover rounded-t-xl hover:scale-110 transition-all duration-500 ease-in-out" />
         </div>
         <div className="grid p-2 gap-1 mx-2">
           <div className="flex justify-between items-center">
+            <div className="flex gap-2 items-center">
             <strong className="hover:text-orange-600 cursor-pointer">{name}</strong>
+            <sub>({netQuantity})</sub>
+            </div>
             <div className="flex gap-2">
             <BiFoodTag className={`${type === 'non-veg'? 'fill-red-600' : 'fill-green-600'} cursor-pointer`} size={20} />
             <IoHeartSharp className='hover:fill-red-600 cursor-pointer' size={20} />
