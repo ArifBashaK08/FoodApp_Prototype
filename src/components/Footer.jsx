@@ -14,7 +14,7 @@ function Footer(props) {
   const contact = [<SiGmail size={30} />, <TfiHeadphoneAlt size={30} />]
 
   return (
-    <div style={{ background: 'radial-gradient(circle at 100% 0%, rgba(255, 88, 3, 1) 0%, rgba(0, 0, 0, 1) 50%, rgba(0, 0, 0, 1) 100%)' }}>
+    <div style={{ background: 'radial-gradient(circle at 100% 0%, rgba(255, 88, 3, 1) 0%, rgba(0, 0, 0, 1) 50%, rgba(0, 0, 0, 1) 100%)' }} className="select-none">
       <div className="flex sm:flex-none text-white pt-6 px-4
       ">
         <h3 className="font-black md:text-xl  hover:cursor-pointer hover:text-orange-600">{props.title}</h3>
