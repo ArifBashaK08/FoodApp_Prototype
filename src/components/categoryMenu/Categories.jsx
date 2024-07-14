@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { RxCross2 } from "react-icons/rx";
 import { MdRestaurantMenu } from "react-icons/md";
-import FoodData from "../foodItems/FoodData";
+import FoodData from "../foodItems/foodData";
 import { useDispatch, useSelector } from "react-redux";
 import { filterMenu } from "@/redux/slices/CategorySlice";
 

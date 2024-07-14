@@ -1,4 +1,4 @@
-const FoodData = [
+const foodData = [
     {
         id: 1,
         type: 'Biryani',
@@ -482,4 +482,4 @@ const FoodData = [
     
 ];
 
-export default FoodData;
+export default foodData;

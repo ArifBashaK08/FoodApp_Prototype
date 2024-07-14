@@ -1,7 +1,7 @@
 import FoodCard from "./FoodCard"
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import FoodData from "./FoodData";
+import foodData from "./foodData";
 import { useSelector } from "react-redux";
 import Cart from '../cart/Cart'
 import { ToastContainer } from 'react-toastify';
@@ -17,7 +17,7 @@ function FoodItems() {
         <>
             <ToastContainer />
             <div className="flex flex-wrap  text-sm md:text-md md:grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 p-4 gap-2 select-none">
-            {FoodData.filter((food) => {
+            {foodData.filter((food) => {
                     if (category === 'All') {
                         return food.name.toLowerCase().includes(search.toLowerCase())
 
